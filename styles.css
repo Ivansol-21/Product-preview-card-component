@@ -11,11 +11,12 @@
 /* Declaracion de variables */
 :root {
     /* Colores primarios */
-    --Dark-cyan: rgb(60,128,103);
-    --Cream: rgb(242,235,227);
+    --Dark-cyan: rgb(60, 128, 103);
+    --Cream: rgb(242, 235, 227);
     /* Colores secundarios */
-    --Very-dark-blue: rgb(28,35,43);
-    --Dark-grayish-blue: rgb(108,114,137);
+    --Very-dark-blue: rgb(28, 35, 43);
+    --Very-dark-blue-05: rgba(28, 35, 43, 0.5);
+    --Dark-grayish-blue: rgb(108, 114, 137);
     --White: rgb(255, 255, 255);
 
     /* Tipografia */
@@ -124,6 +125,11 @@ h1 {
     letter-spacing: var(--letter-spacing-02N);
     text-decoration: line-through;
 }
+.fondo {
+    background-color: var(--Dark-cyan);
+    inline-size: 100%;
+    border-radius: 0.5rem;
+}
 .card__botonCompra {
     font-family: var(--font-Montserrat);
     font-size: var(--font-Size-14);
@@ -136,7 +142,9 @@ h1 {
     padding: 0.875rem 0;
     font-weight: var(--Weight-Bold);
     color: var(--White);
-    background-color: var(--Dark-cyan);
+}
+.card__botonCompra:hover {
+    background-color: var(--Very-dark-blue-05);
     border-radius: 0.5rem;
 }
 
