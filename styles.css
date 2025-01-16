@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 14
+}
+/* Declaracion de variables */
+:root {
+    /* Colores primarios */
+    --Dark-cyan: rgb(60,128,103);
+    --Cream: rgb(242,235,227);
+    /* Colores secundarios */
+    --Very-dark-blue: rgb(28,35,43);
+    --Dark-grayish-blue: rgb(108,114,137);
+    --White: rgb(255, 255, 255);
+
+    /* Tipografia */
+    --font-Montserrat: 'Montserrat', sans-serif;
+    --font-Fraunces: 'Fraunces', serif;
+
+    --Line-height: 100%;
+    --Line-height-1: 165%;
+    
+    --font-Size-14: 0.875rem;
+    --font-Size-32: 2rem;
+
+    --Weight-Medium: 500;
+    --Weight-Bold: 700;
+
+    /* Espaciado */
+    --letter-spacing-25: 0.25rem;
+    --letter-spacing-01: 0.01rem;
+    --letter-spacing-02N: -0.02rem;
+}
+/* Resect basico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* Estilods */
+main {
+    display: flex;
+    min-block-size: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Cream);
+    padding: 1rem;
+}
+.card--flex {
+    max-inline-size: 37.5rem;
+    min-inline-size: 18rem;
+    background-color: var(--White);
+    display: flex;
+    border-radius: 0.5rem;
+}
+.card__imagenContenedor {
+    background-color: black;
+    max-inline-size: 18.75rem;
+    overflow: hidden;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.card__imagenContenedor img {
+    max-inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+}
+.card__productoInfo {
+    max-inline-size: 18.75rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: var(--Dark-grayish-blue);
+}
+.card__productoInfo header {
+    font-size: var(--font-Size-14);
+    font-family: var(--font-Montserrat);
+    padding-block-end: 1.5rem;
+    line-height: var(--Line-height);
+    letter-spacing: var(--letter-spacing-25);
+}
+h1 {
+    font-size: var(--font-Size-32);
+    font-weight: var(--Weight-Bold);
+    font-family: var(--font-Fraunces);
+    color: var(--Very-dark-blue);
+    line-height: var(--Line-height);
+    padding-block-end: 1.75rem;
+}
+.card__descripcion {
+    line-height: var(--Line-height-1);
+    letter-spacing: var(--letter-spacing-01);
+    font-family: var(--font-Montserrat);
+    font-size: var(--font-Size-14);
+    padding-block-end: 1.75rem;
+}
+.card__precios {
+    padding-block-end: 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+.card__precioActual {
+    font-family: var(--font-Fraunces);
+    font-size: var(--font-Size-32) ;
+    font-weight: var(--Weight-Bold);
+    color: var(--Dark-cyan);
+}
+.card__precioAnterior {
+    font-size: var(--font-Size-14);
+    font-family: var(--font-Montserrat);
+    letter-spacing: var(--letter-spacing-02N);
+    text-decoration: line-through;
+}
+.card__botonCompra {
+    font-family: var(--font-Montserrat);
+    font-size: var(--font-Size-14);
+    inline-size: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.875rem 0;
+    font-weight: var(--Weight-Bold);
+    color: var(--White);
+    background-color: var(--Dark-cyan);
+    border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 375px) {
+    .card--flex {
+        flex-direction: column;
+    }
+    .card__imagenContenedor {
+        max-inline-size: 24.429rem;
+        max-block-size: 14rem;
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .card__productoInfo {
+        max-inline-size: 24.429rem;
+        padding: 1.5rem;
+    }
+    .card__productoInfo header {
+        padding-block-end: 1rem;
+    }
+    h1 {
+        padding-block-end: 1.5rem;
+    }
+    .card__descripcion {
+        padding-block-end: 1.5rem;
+    }
+    .card__precios {
+        padding-block-end: 1.25rem;
+    }
+}
